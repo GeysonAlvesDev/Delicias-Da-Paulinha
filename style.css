@@ -1,0 +1,263 @@
+:root{
+    --laranja-recheio: #D96A27;
+    --bege-fundo: #FBF4EC;
+    --marrom-massa: #592E19;
+    
+    
+    --fundo-pagina: #fff;
+    --texto-principal: #262626;
+    --borda-divisores: #dbdbdb;
+    --azul-botao-links:#0095f6;
+    --cinza-botoes-secundarios:#efefef;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+
+body{
+background-color: var(--fundo-pagina);
+font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+padding-top: 60px;
+font-size: 14px;
+}
+
+.cabecalho-superior{
+    background-color: #fff;
+    border-bottom: 1px solid var(--borda-divisores);
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+.cabecalho-superior img{
+    height: 30px;
+    width: auto;
+}
+
+.cabecalho-perfil{
+    display: flex;
+    max-width: 935px;
+    margin: 0 auto;
+    padding: 30px 20px;
+    gap: 20px;
+
+}
+
+.foto-perfil{
+    display: flex;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.foto-perfil img{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    padding: 3px;
+   background: linear-gradient(#fff, #fff) padding-box,
+     linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+border: 3px solid transparent;
+background-clip: padding-box, border-box;
+flex-shrink: 0;
+cursor: pointer;
+}
+
+.informacao-perfil{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    flex-grow: 1;
+}
+
+
+
+ .nome-usuario-container{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+ }
+
+ .nome-usuario{
+    font-size: 20px;
+    font-weight: 400;
+    color: var(--texto-principal);
+ }
+ 
+ .status{
+    display: flex;
+    gap: 30px;
+    list-style: none;
+ }
+
+ .bio{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+ }
+
+ .titulo-bio{
+    font-size: 14px;
+    font-weight: 400;
+ }
+
+ .categoria{
+    color: #8e8e8e;
+ }
+
+ .threads-link a,
+ .delivery-link{
+    color: var(--azul-botao-links);
+    text-decoration: none;
+    font-weight: 600;
+ }
+
+ .botoes-acao{
+    display: flex;
+    gap: 10px;
+ }
+
+ .btn-seguindo,
+ .btn-mensagem{
+background-color: var(--cinza-botoes-secundarios);
+color: var(--texto-principal);
+border: none;
+padding: 7px 16px;
+border-radius: 8px;
+font-weight: 600;
+font-size: 14px;
+cursor: pointer;
+ }
+ 
+.stories-fixos{
+    display: flex;
+    justify-content: flex-start;
+    gap: 25px;
+    max-width: 935px;
+    margin: 0 auto 30px auto;
+    padding: 0 20px;
+    overflow-x: auto;
+}
+
+.stories-fixos-itens{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.stories-fixos img{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: var(--bege-fundo);
+    object-fit: contain;
+    padding: 12px;
+    border: 1px solid var(--borda-divisores);
+}
+
+.stories-fixos-itens span{
+    font-size: 12px;
+    color: var(--texto-principal);
+    font-weight: 500;
+}
+
+
+.abas-feed{
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    border-top: 1px solid var(--borda-divisores);
+    max-width: 935px;
+    margin: 0 auto;
+}
+
+.item-aba{
+background: none;
+border: none;
+padding: 15px 0;
+font-size: 12px;
+font-weight: 600;
+color: #8e8e8e;
+cursor: pointer;
+text-transform: uppercase;
+letter-spacing: 1px;
+}
+
+.item-aba.ativa{
+    color: var(--texto-principal);
+    border-top: 1px solid var(--texto-principal);
+    margin-top: -1px;
+}
+
+.grade-feed{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 4px;
+    max-width: 935px;
+    margin: 20px auto 50px auto;
+    padding: 0 20px;
+    width: 100%;
+}
+
+.grade-feed img{
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    display: block;
+    cursor: pointer;
+}
+
+.rodape {
+    text-align: center;
+    padding: 20px 0 40px 0;
+    color: #8e8e8e;
+    font-size: 12px;
+}
+
+
+ /*REGRAS RESPONSIVIDADE (sempre no final do arquivo)*/
+@media (max-width: 768px){
+
+    .cabecalho-perfil{
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 15px;
+        gap: 15px;
+    }
+
+.foto-perfil img{
+    width: 80px;
+    height: 80px;
+}
+
+.status{
+    justify-content: space-around;
+    width: 100%;
+}
+
+.stories-fixos-itens img{
+    width: 60px;
+    height: 60px;
+}
+
+.grade-feed{
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+}
+
+
+ }
